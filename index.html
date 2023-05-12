@@ -15,44 +15,130 @@
 </head>
 
 <body>
+   <div class="header-reponsive">
+      <div class="menu">
+         <div class="close d-flex justify-content-between">
+            <h3>Menu</h3>
+            <button class="btn-close ms-auto me-0"></button>
+         </div>
+         <div class="menu-list">
+            <div class="menu-item">
+               <div class="item-1 d-flex justify-content-between">
+                  <a>Về AVG</a>
+                  <p data-bs-toggle="collapse" data-bs-target="#list1"><i class="bi bi-chevron-down"></i></p>
+               </div>
+               <div class="item-2 collapse" id="list1">
+                  <a href="#">Giới thiệu chung</a>
+                  <a href="#">Đối tác</a>
+                  <a href="#">Liên hệ</a>
+               </div>
+            </div>
+            <div class="menu-item">
+               <div class="item-1 d-flex justify-content-between">
+                  <a>Hỗ trợ</a>
+                  <p data-bs-toggle="collapse" data-bs-target="#list2"><i class="bi bi-chevron-down"></i></p>
+               </div>
+               <div class="item-2 collapse" id="list2">
+                  <a href="#">Hướng Dẫn Dò Kênh</a>
+                  <a href="#">Nâng Cấp Phần Mềm</a>
+                  <a href="#">Chính Sách Bảo Hành</a>
+                  <a href="#">Đăng Kí Đại Lý Uỷ Quyền</a>
+                  <a href="#">Hoá Đơn Điện Tử</a>
+                  <a href="#">Câu Hỏi Thường Gặp</a>
+                  <a href="#">Tra Cứu Hợp Đồng Điện Tử</a>
+               </div>
+            </div>
+            <div class="menu-item">
+               <div class="item-1 d-flex justify-content-between">
+                  <a>Mua AVG</a>
+                  <p data-bs-toggle="collapse" data-bs-target="#list3"><i class="bi bi-chevron-down"></i></p>
+               </div>
+               <div class="item-2 collapse" id="list3">
+                  <a href="#">Đăng Kí Lắp Đặt Tại Nhà</a>
+                  <a href="#">Tìm Đại Lý Gần Nhất</a>
+                  <a href="#">Bộ Sản Phẩm AVG</a>
+                  <a href="#">Gói Dịch Vụ</a>
+               </div>
+            </div>
+            <div class="menu-item">
+               <div class="item-1 d-flex justify-content-between">
+                  <a>Gia hạn thuê bao</a>
+                  <p data-bs-toggle="collapse" data-bs-target="#list4"><i class="bi bi-chevron-down"></i></p>
+               </div>
+               <div class="item-2 collapse" id="list4">
+                  <a href="#">Các Hình Thức Gia Hạn Cước</a>
+                  <a href="#">Gia Hạn Trực Tuyến</a>
+                  <a href="#">Hướng Dẫn Tra Cứu Cước</a>
+               </div>
+            </div>
+            <div class="menu-item">
+               <div class="item-1 d-flex justify-content-between">
+                  <a href="#">Tin tức</a>
+                  <p data-bs-toggle="collapse" data-bs-target="#list5"><i class="bi bi-chevron-down"></i></p>
+               </div>
+               <div class="item-2 collapse" id="list5">
+                  <a href="#">Tin tức nổi bật</a>
+                  <a href="#">Ưu đãi</a>
+                  <a href="#">Chương trình đặc sắc</a>
+               </div>
+            </div>
+            <div class="menu-item">
+               <div class="item-1 d-flex justify-content-between">
+                  <a href="#">Khuyễn mãi hot</a>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
    <!-- header -->
    <header id="header">
+
       <div class="header-top border-bottom">
          <div class="container">
-            <ul class="menu">
-               <li class="dropdown">
-                  <a class="drop-btn">Về AVG</a>
-                  <ul class="dropdown-content">
-                     <li><a href="#">Giới thiệu chung</a></li>
-                     <li><a href="#">Đối tác</a></li>
-                     <li><a href="#">Liên hệ</a></li>
-                  </ul>
-               </li>
-               <li class="dropdown">
-                  <a class="drop-btn">Hỗ trợ</a>
-                  <ul class="dropdown-content">
-                     <li><a href="#">Hướng Dẫn Dò Kênh</a></li>
-                     <li><a href="#">Nâng Cấp Phần Mềm</a></li>
-                     <li><a href="#">Chính Sách Bảo Hành</a></li>
-                     <li><a href="#">Đăng Kí Đại Lý Uỷ Quyền</a></li>
-                     <li><a href="#">Hoá Đơn Điện Tử</a></li>
-                     <li><a href="#">Câu Hỏi Thường Gặp</a></li>
-                     <li><a href="#">Tra Cứu Hợp Đồng Điện Tử</a></li>
-                  </ul>
-               </li>
-               <li class="dropdown">
-                  <a class="drop-btn search"><i class="bi bi-search"></i></a>
-                  <div class="dropdown-content reset">
-                     <form>
-                        <input type="text" placeholder="Search...">
-                        <button type="button"><i class="bi bi-search"></i></button>
-                     </form>
-                  </div>
-               </li>
-               <li class="dropdown">
-                  <a class="phone" href="tel:19001900">19001900</a>
-               </li>
-            </ul>
+            <div class="d-flex justify-content-between align-items-center">
+               <div class="logo">
+                  <a href="./index.html"><img src="./img/logo.png" alt="..." class="img-fluid"></a>
+               </div>
+               <ul class="menu">
+                  <li class="dropdown">
+                     <a class="drop-btn">Về AVG</a>
+                     <ul class="dropdown-content">
+                        <li><a href="#">Giới thiệu chung</a></li>
+                        <li><a href="#">Đối tác</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="drop-btn">Hỗ trợ</a>
+                     <ul class="dropdown-content">
+                        <li><a href="#">Hướng Dẫn Dò Kênh</a></li>
+                        <li><a href="#">Nâng Cấp Phần Mềm</a></li>
+                        <li><a href="#">Chính Sách Bảo Hành</a></li>
+                        <li><a href="#">Đăng Kí Đại Lý Uỷ Quyền</a></li>
+                        <li><a href="#">Hoá Đơn Điện Tử</a></li>
+                        <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                        <li><a href="#">Tra Cứu Hợp Đồng Điện Tử</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="drop-btn search"><i class="bi bi-search"></i></a>
+                     <div class="dropdown-content reset">
+                        <form>
+                           <input type="text" placeholder="Search...">
+                           <button type="button"><i class="bi bi-search"></i></button>
+                        </form>
+                     </div>
+                  </li>
+                  <li class="dropdown">
+                     <a class="phone" href="tel:19001900">19001900</a>
+                  </li>
+               </ul>
+               <div class="btn-reponsive">
+                  <button><i class="bi bi-list"></i></button>
+               </div>
+            </div>
          </div>
       </div>
 
@@ -278,9 +364,12 @@
                      <p>- Mail: CSKH@avg.vn</p>
                   </div>
                   <div class="icon pt-1 pb-3">
-                     <a href="#" title="Follow on facebook"><i class="bi bi-facebook"></i></a>
-                     <a href="#" title="Send us an mail"><i class="bi bi-envelope-fill"></i></a>
-                     <a href="#" title="Follow on Youtube"><i class="bi bi-youtube"></i></a>
+                     <a href="#"><i data-bs-toggle="tooltip" data-bs-placement="top" title="Follow on facebook"
+                           class="bi bi-facebook"></i></a>
+                     <a href="#"><i data-bs-toggle="tooltip" data-bs-placement="top" title="Send us an mail"
+                           class="bi bi-envelope-fill"></i></a>
+                     <a href="#"><i data-bs-toggle="tooltip" data-bs-placement="top" title="Follow on Youtube"
+                           class="bi bi-youtube"></i></a>
                      <a href="#"><img src="./img/Footer/zalo-1-300x300.png" alt="..."></a>
                   </div>
                </div>
@@ -350,11 +439,63 @@
 
 
    <script src="./libs/jquery/jquery-3.6.4.min.js"></script>
-   <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> -->
+   <script src="./libs/@popperjs/core/dist/umd/popper.min.js"></script>
    <script src="./libs/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
    <script src="./libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
    <script src="./js/main.js"></script>
+
    <script>
+      var btnReponsive = document.querySelector("#header .header-top .btn-reponsive");
+      var reponsive = document.querySelector(".header-reponsive");
+      var menu = document.querySelector(".header-reponsive .menu");
+      var btnClose = document.querySelector(".header-reponsive .btn-close");
+      btnReponsive.onclick = function () {
+         reponsive.style.transform = "translateX(0)"
+         menu.style.transform = "translateX(0)"
+      }
+      btnClose.onclick = function () {
+         reponsive.style.transform = "translateX(-100%)"
+         menu.style.transform = "translateX(-100%)"
+      }
+
+      reponsive.onclick = function () {
+         reponsive.style.transform = "translateX(-100%)"
+         menu.style.transform = "translateX(-100%)"
+      }
+
+      menu.onclick = function (e) {
+         e.stopPropagation()
+      }
+
+      var listBtnDown = document.querySelectorAll(".header-reponsive .menu .menu-item .item-1 p")
+      listBtnDown.forEach(btnDown => {
+         {
+            btnDown.onclick = function () {
+               if (!btnDown.classList.contains("collapsed")) {
+                  btnDown.style.transform = "rotate(-180deg)"
+               } else {
+                  btnDown.style.transform = "inherit"
+               }
+            }
+         }
+      })
+
+
+
+      window.onresize = function () {
+         if (window.innerWidth > 768) {
+            reponsive.style.transform = "translateX(-100%)"
+            menu.style.transform = "translateX(-100%)"
+         }
+      }
+   </script>
+
+   <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+         return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+
       var btn = document.querySelector("#main .support .item-2 .question button")
       var icon = document.querySelector("#main .support .item-2 .question button i")
       btn.onclick = function () {
