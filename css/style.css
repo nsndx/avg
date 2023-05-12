@@ -54,19 +54,21 @@
 }
 
 .header-reponsive {
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 0px;
+  top: 0;
   bottom: 0;
   right: 0;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
 }
 .header-reponsive .menu {
   width: 60%;
   background-color: rgba(250, 89, 3, 0.9);
   min-height: 100%;
   color: #fff;
+  transform: translateX(-100%);
   transition: all 0.5s;
 }
 .header-reponsive .menu .close {
@@ -485,7 +487,7 @@
   width: 75%;
   background-color: #ffa522;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #main .dth .bg {
     width: 100%;
   }
@@ -553,7 +555,7 @@
   width: 75%;
   background-color: rgba(235, 85, 5, 0.9);
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #main .dtt .bg {
     width: 100%;
   }

@@ -64,23 +64,22 @@
 }
 
 .header-reponsive {
-   // display: none;
-   position: absolute;
+   position: fixed;
    left: 0;
-   top: 0px;
+   top: 0;
    bottom: 0;
    right: 0;
    z-index: 9999;
    background-color: rgba(0, 0, 0, 0.5);
 
-   // transform: translateX(-100%);
+   transform: translateX(-100%);
    .menu {
       width: 60%;
       background-color: rgba(250, 89, 3, 0.9);
       min-height: 100%;
       color: #fff;
 
-      // transform: translateX(-100%);
+      transform: translateX(-100%);
       transition: all .5s;
 
       .close {
@@ -104,7 +103,6 @@
          border-top: 1px solid #fff;
 
          .menu-item {
-            // padding: 5px;
             border-bottom: 1px solid #fff;
 
             .item-1 {
@@ -587,7 +585,7 @@
       position: relative;
 
       .bg {
-         @media (max-width:576px) {
+         @media (max-width:768px) {
             width: 100%;
          }
 
@@ -667,7 +665,7 @@
       position: relative;
 
       .bg {
-         @media (max-width:576px) {
+         @media (max-width:768px) {
             width: 100%;
          }
 

@@ -1,12 +1,14 @@
+// xử lý menu khi lăn chuột
 window.addEventListener("scroll", function (event) {
     var scrollTop = this.document.documentElement.scrollTop
     if (scrollTop > 100) {
         $("#header").addClass("fixed");
-    } else  {
+    } else {
         $("#header").removeClass("fixed");
     }
-}); 
+});
 
+// render banner
 var listBanner = ["./img/Banner/web-1.png", "./img/Banner/web-2.png", "./img/Banner/web-3.jpg", "./img/Banner/web-4.png"]
 
 var banner = document.querySelector("#main .banner .owl-carousel")
@@ -44,6 +46,7 @@ $('#main .banner .owl-carousel').owlCarousel({
     autoplayHoverPause: true
 })
 
+// render news hot
 var listNewsHot = [
     { img: "./img/NewsHot/1.png", title: "GIỚI THIỆU KÊNH HƯỚNG DẪN KHÁCH HÀNG – KÊNH 11", time: "11/04/2023" },
     { img: "./img/NewsHot/2.jpg", title: "THÔNG BÁO: TRUYỀN HÌNH AVG CẬP NHẬT DANH SÁCH KÊNH TỪ 29/3/2023", time: "28/03/2023" },
@@ -91,7 +94,8 @@ $('#main .news-hot .owl-carousel').owlCarousel({
     }
 })
 
-var listSlide = ["./img/Slide/j1.jpg","./img/Slide/j2.jpg","./img/Slide/j3.jpg","./img/Slide/j4.jpg","./img/Slide/j5.jpg","./img/Slide/j6.jpg","./img/Slide/j7.jpg","./img/Slide/j8.jpg","./img/Slide/j9.jpg","./img/Slide/j10.jpg","./img/Slide/j11.jpg","./img/Slide/j12.jpg","./img/Slide/j13.jpg","./img/Slide/j14.jpg","./img/Slide/p1.png","./img/Slide/p2.png","./img/Slide/p3.png","./img/Slide/p4.png","./img/Slide/p5.png","./img/Slide/p6.png","./img/Slide/p7.png","./img/Slide/p8.png","./img/Slide/p9.png","./img/Slide/p10.png","./img/Slide/p11.png","./img/Slide/p12.png","./img/Slide/p13.png"]
+//render slide 
+var listSlide = ["./img/Slide/j1.jpg", "./img/Slide/j2.jpg", "./img/Slide/j3.jpg", "./img/Slide/j4.jpg", "./img/Slide/j5.jpg", "./img/Slide/j6.jpg", "./img/Slide/j7.jpg", "./img/Slide/j8.jpg", "./img/Slide/j9.jpg", "./img/Slide/j10.jpg", "./img/Slide/j11.jpg", "./img/Slide/j12.jpg", "./img/Slide/j13.jpg", "./img/Slide/j14.jpg", "./img/Slide/p1.png", "./img/Slide/p2.png", "./img/Slide/p3.png", "./img/Slide/p4.png", "./img/Slide/p5.png", "./img/Slide/p6.png", "./img/Slide/p7.png", "./img/Slide/p8.png", "./img/Slide/p9.png", "./img/Slide/p10.png", "./img/Slide/p11.png", "./img/Slide/p12.png", "./img/Slide/p13.png"]
 
 var slide = document.querySelector("#main .slide .owl-carousel")
 
@@ -125,4 +129,66 @@ $('#main .slide .owl-carousel').owlCarousel({
     }
 })
 
+// xử lý tooltip bootstrap
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
+//xử lý icon up down của .support
+var btn = document.querySelector("#main .support .item-2 .question button")
+var icon = document.querySelector("#main .support .item-2 .question button i")
+btn.onclick = function () {
+    if (!btn.classList.contains("collapsed")) {
+        btn.style.color = "#f95702";
+        btn.style.fontWeight = "700";
+        icon.style.transform = "rotate(-180deg)"
+    } else {
+        btn.style.color = "inherit";
+        btn.style.fontWeight = "inherit";
+        icon.style.transform = "inherit"
+    }
+}
+
+// xử lý reponsive header
+var btnReponsive = document.querySelector("#header .header-top .btn-reponsive");
+var reponsive = document.querySelector(".header-reponsive");
+var menu = document.querySelector(".header-reponsive .menu");
+var btnClose = document.querySelector(".header-reponsive .btn-close");
+btnReponsive.onclick = function () {
+    reponsive.style.transform = "translateX(0)"
+    menu.style.transform = "translateX(0)"
+}
+btnClose.onclick = function () {
+    reponsive.style.transform = "translateX(-100%)"
+    menu.style.transform = "translateX(-100%)"
+}
+
+reponsive.onclick = function () {
+    reponsive.style.transform = "translateX(-100%)"
+    menu.style.transform = "translateX(-100%)"
+}
+
+menu.onclick = function (e) {
+    e.stopPropagation()
+}
+
+var listBtnDown = document.querySelectorAll(".header-reponsive .menu .menu-item .item-1 p")
+listBtnDown.forEach(btnDown => {
+    {
+        btnDown.onclick = function () {
+            if (!btnDown.classList.contains("collapsed")) {
+                btnDown.style.transform = "rotate(-180deg)"
+            } else {
+                btnDown.style.transform = "inherit"
+            }
+        }
+    }
+})
+
+window.onresize = function () {
+    if (window.innerWidth > 768) {
+        reponsive.style.transform = "translateX(-100%)"
+        menu.style.transform = "translateX(-100%)"
+    }
+}

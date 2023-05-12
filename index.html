@@ -15,6 +15,8 @@
 </head>
 
 <body>
+
+   <!-- reponsive header -->
    <div class="header-reponsive">
       <div class="menu">
          <div class="close d-flex justify-content-between">
@@ -91,6 +93,7 @@
          </div>
       </div>
    </div>
+   <!-- end reponsive header -->
 
    <!-- header -->
    <header id="header">
@@ -187,6 +190,7 @@
    </header>
    <!-- end header -->
 
+   <!-- main -->
    <main id="main">
       <div class="banner">
          <div class="owl-carousel owl-theme">
@@ -211,7 +215,7 @@
          <div class="bg"></div>
          <div class="container content">
             <div class="row align-items-center">
-               <div class="col-sm-8 col-md-9">
+               <div class="col-sm-8 col-lg-9">
                   <div class="item-1">
                      <h3>Truyền hình số vệ tinh DTH</h3>
                      <p>Gói kênh DTH mang đến cho khán giả sự lựa chọn hấp dẫn với mức phí thuê bao chỉ từ 30.000 -
@@ -224,7 +228,7 @@
                      <a href="#">Xem thêm</a>
                   </div>
                </div>
-               <div class="pt-3 py-md-0 col-sm-4 col-md-3">
+               <div class="pt-3 py-md-0 col-sm-4 col-lg-3">
                   <div class="item-2">
                      <img src="./img/DTHDTT4-02-2048x1633.jpg" alt="..." class="img-fluid">
                   </div>
@@ -236,13 +240,13 @@
       <div class="dtt py-4 my-5">
          <div class="bg"></div>
          <div class="container content">
-            <div class="row">
-               <div class="pb-3 py-md-0 col-sm-4 col-md-3">
+            <div class="row align-items-center">
+               <div class="pb-3 py-md-0 col-sm-4 col-lg-3">
                   <div class="item-1">
                      <img src="./img/DTHDTT4-01-1024x807.jpg" alt="..." class="img-fluid">
                   </div>
                </div>
-               <div class="col-sm-8 col-md-9">
+               <div class="col-sm-8 col-lg-9">
                   <div class="item-2">
                      <h3>Truyền hình số mặt đất DTT</h3>
                      <p>Gói Cao cấp của Truyền hình số vệ tinh DTT mang đến 119 kênh (52 kênh HD), gói Cơ bản cung cấp
@@ -269,7 +273,7 @@
                      <p>Ngay hôm nay !</p>
                   </div>
                </div>
-               <div class="py-3 pt-md-0 col-md-5">
+               <div class="py-5 pt-md-0 col-md-5">
                   <div class="item-2">
                      <h3>Hỗ trợ gọi khách hàng</h3>
                      <a href="tel:19001900" class="phone">
@@ -340,6 +344,7 @@
          </div>
       </div>
    </main>
+   <!-- end main -->
 
    <!-- footer -->
    <footer id="footer">
@@ -437,79 +442,11 @@
    </footer>
    <!-- end footer -->
 
-
    <script src="./libs/jquery/jquery-3.6.4.min.js"></script>
    <script src="./libs/@popperjs/core/dist/umd/popper.min.js"></script>
    <script src="./libs/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
    <script src="./libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
    <script src="./js/main.js"></script>
-
-   <script>
-      var btnReponsive = document.querySelector("#header .header-top .btn-reponsive");
-      var reponsive = document.querySelector(".header-reponsive");
-      var menu = document.querySelector(".header-reponsive .menu");
-      var btnClose = document.querySelector(".header-reponsive .btn-close");
-      btnReponsive.onclick = function () {
-         reponsive.style.transform = "translateX(0)"
-         menu.style.transform = "translateX(0)"
-      }
-      btnClose.onclick = function () {
-         reponsive.style.transform = "translateX(-100%)"
-         menu.style.transform = "translateX(-100%)"
-      }
-
-      reponsive.onclick = function () {
-         reponsive.style.transform = "translateX(-100%)"
-         menu.style.transform = "translateX(-100%)"
-      }
-
-      menu.onclick = function (e) {
-         e.stopPropagation()
-      }
-
-      var listBtnDown = document.querySelectorAll(".header-reponsive .menu .menu-item .item-1 p")
-      listBtnDown.forEach(btnDown => {
-         {
-            btnDown.onclick = function () {
-               if (!btnDown.classList.contains("collapsed")) {
-                  btnDown.style.transform = "rotate(-180deg)"
-               } else {
-                  btnDown.style.transform = "inherit"
-               }
-            }
-         }
-      })
-
-
-
-      window.onresize = function () {
-         if (window.innerWidth > 768) {
-            reponsive.style.transform = "translateX(-100%)"
-            menu.style.transform = "translateX(-100%)"
-         }
-      }
-   </script>
-
-   <script>
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-         return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-
-      var btn = document.querySelector("#main .support .item-2 .question button")
-      var icon = document.querySelector("#main .support .item-2 .question button i")
-      btn.onclick = function () {
-         if (!btn.classList.contains("collapsed")) {
-            btn.style.color = "#f95702";
-            btn.style.fontWeight = "700";
-            icon.style.transform = "rotate(-180deg)"
-         } else {
-            btn.style.color = "inherit";
-            btn.style.fontWeight = "inherit";
-            icon.style.transform = "inherit"
-         }
-      }
-   </script>
 </body>
 
 </html>
