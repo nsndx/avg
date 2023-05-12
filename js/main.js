@@ -114,7 +114,7 @@ $('#main .slide .owl-carousel').owlCarousel({
     // autoplayHoverPause: true,
     responsive: {
         0: {
-            items: 2
+            items: 3
         },
         600: {
             items: 5
